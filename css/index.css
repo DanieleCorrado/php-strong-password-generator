@@ -1,3 +1,5 @@
+/* Regole generali */
+
 * {
   margin: 0;
   padding: 0;
@@ -13,21 +15,15 @@ h2 {
   margin-bottom: 20px;
 }
 
+/* Regole center */
+
 .center {
   text-align: center;
   margin-top: 20px;
   color: white;
 }
 
-.password {
-  background-color: rgb(207, 244, 252);
-  color: black;
-  border-radius: 5px;
-  width: 50%;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 20px;
-}
+/* Regole generator */
 
 #generator {
   width: 50%;
@@ -36,6 +32,8 @@ h2 {
   background-color: white;
   padding: 20px;
 }
+
+/* Regole sensButton */
 
 .sendButton {
   margin-top: 20px;

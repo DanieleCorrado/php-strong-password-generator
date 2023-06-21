@@ -1,10 +1,6 @@
 <?php 
 
-if($_GET != [] || $_GET["pswLength"] != "") {
-  echo generate_password($_GET["lenght"]);
-} else {
-  echo "inserisci la lunghezza";
-}
+  // Generatore password
   function generate_password($strength) {
       $permitted_chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
       $permitted_chars_length = strlen($permitted_chars);
@@ -13,7 +9,8 @@ if($_GET != [] || $_GET["pswLength"] != "") {
           $random_character = $permitted_chars[mt_rand(0, $permitted_chars_length - 1)];
           $random_string .= $random_character;
       }
-      echo $random_string;
+      session_start();
+      $_SESSION['password'] = $random_string;
   }
 
 ?>
