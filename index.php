@@ -10,17 +10,31 @@
 </head>
 <body>
 
-<form>
-  <label for="pswLength">Lunghezza password: </label>
-  <input type="number" name=lenght>
-  <input type="submit" value="GENERATE">
-</form>
+<div class="center">
 
-<div>
-<?php
-include __DIR__ . './function.php';
-?>
+<h1>Strong Password Generator</h1>
+<h2>Genera una password sicura</h2>
+
 </div>
+
+<div class="password">
+  <?php
+  include __DIR__ . './function.php';
+  ?>
+</div>
+
+<div id="generator">
+
+  <form>
+    <div class="d-flex justify-content-between">
+      <label for="pswLength">Lunghezza password: </label>
+      <input type="number" name=lenght>
+    </div>
+    <input class="sendButton" type="submit" value="INVIA">
+  </form>
+
+</div>
+
 
 
   

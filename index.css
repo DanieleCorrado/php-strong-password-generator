@@ -3,3 +3,44 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  background-color: rgb(0, 22, 50);
+}
+
+h1,
+h2 {
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.password {
+  background-color: rgb(207, 244, 252);
+  color: black;
+  border-radius: 5px;
+  width: 50%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#generator {
+  width: 50%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  padding: 20px;
+}
+
+.sendButton {
+  margin-top: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(9, 108, 252);
+  padding: 5px;
+}
