@@ -22,7 +22,16 @@
   <form>
     <div class="d-flex justify-content-between">
       <label for="pswLength">Lunghezza password: </label>
-      <input type="number" name=lenght>
+      <input type="number" name="lenght">
+    </div>
+    <div id="optionText" class="d-flex justify-content-between">
+      <label for="character-repetition">Consenti ripetizioni di uno o più caratteri: </label>
+      <div id="optionSelection" class="">
+        <label for="yes">SI </label>
+        <input type="radio" name="repetition" value="yes">
+        <label for="no">NO </label>
+        <input type="radio" name="repetition" value="no">
+      </div>
     </div>
     <input class="sendButton" type="submit" value="INVIA">
   </form>
@@ -30,9 +39,9 @@
 </div>
 
 <?php
-if($_GET != [] || $_GET["pswLength"] != "") {
-  include __DIR__ . './function.php';
-  echo generate_password($_GET["lenght"]);
+if($_GET != [] || $_GET["length"] != "") {
+  include __DIR__ . '/function.php';
+  echo generate_password($_GET["lenght"], $_GET["repetition"]);
   header('Location: ./password.php');
 }
 ?>
