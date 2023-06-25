@@ -31,6 +31,21 @@
         <input type="radio" name="repetition" value="yes">
         <label for="no">NO </label>
         <input type="radio" name="repetition" value="no">
+        <div id="psw-option" class="d-flex flex-column">
+          <div id="char">
+            <input type="checkbox" name="character[]" value="characters">
+            <label for="characters">Caratteri </label>
+          </div>
+          <div id="numb">
+            <input type="checkbox" name="character[]" value="numbers">
+            <label for="numbers">Numeri </label>
+          </div>
+          <div id="simb">
+            <input type="checkbox" name="character[]" value="simbols">
+            <label for="simbols">Simboli </label>          
+          </div>
+        </div>
+        
       </div>
     </div>
     <input class="sendButton" type="submit" value="INVIA">
@@ -41,7 +56,7 @@
 <?php
 if($_GET != [] || $_GET["length"] != "") {
   include __DIR__ . '/function.php';
-  echo generate_password($_GET["lenght"], $_GET["repetition"]);
+  echo generate_password($_GET["lenght"], $_GET["repetition"], $_GET['character']);
   header('Location: ./password.php');
 }
 ?>

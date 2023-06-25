@@ -16,10 +16,13 @@
   <h1>La password generata è:</h1>
 
   <div id="password">
-  <?php
-    session_start();
-    echo $_SESSION['password'];
-  ?>
+    <p>
+      <?php
+        session_start();
+        echo $_SESSION['password'];
+      ?>
+  </p>
+  
   </div>
 
 </div>
